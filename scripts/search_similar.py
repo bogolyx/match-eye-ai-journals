@@ -41,7 +41,9 @@ from pathlib import Path
 
 OA = "https://api.openalex.org"
 S2 = "https://api.semanticscholar.org/graph/v1"
-MAILTO = "gaohebei@ojlab.ac.cn"  # OpenAlex polite pool
+# OpenAlex polite pool 标识。公开仓库不写个人邮箱，用环境变量传入：
+#   export OPENALEX_MAILTO="you@example.com"
+MAILTO = os.environ.get("OPENALEX_MAILTO", "scopeshot@example.com")
 ROOT = Path(__file__).resolve().parent.parent
 CACHE_PATH = ROOT / "data" / "journal_ids.json"
 SEARCH_CACHE_PATH = ROOT / "data" / "search_cache.json"
