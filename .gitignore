@@ -1,0 +1,10 @@
+# Python
+__pycache__/
+*.pyc
+
+# 运行时检索缓存（含个人检索历史，不入库）
+data/search_cache.json
+
+# 输出报告
+*.html
+!docs/*.html

@@ -1,0 +1,92 @@
+{
+ "ieee transactions on medical imaging": {
+  "id": "S58069681",
+  "name": "IEEE Transactions on Medical Imaging",
+  "works": 8763,
+  "score": 1.05
+ },
+ "medical image analysis": {
+  "id": "S116571295",
+  "name": "Medical Image Analysis",
+  "works": 4121,
+  "score": 1.05
+ },
+ "information fusion": {
+  "id": "S7560371",
+  "name": "Information Fusion",
+  "works": 4570,
+  "score": 1.05
+ },
+ "ieee transactions on image processing": {
+  "id": "S4210173141",
+  "name": "IEEE Transactions on Image Processing",
+  "works": 13509,
+  "score": 1.05
+ },
+ "ieee journal of biomedical and health informatics": {
+  "id": "S2495854775",
+  "name": "IEEE Journal of Biomedical and Health Informatics",
+  "works": 6739,
+  "score": 1.05
+ },
+ "pattern recognition": {
+  "id": "S414566",
+  "name": "Pattern Recognition",
+  "works": 17019,
+  "score": 1.05
+ },
+ "caai transactions on intelligence technology": {
+  "id": "S2898415742",
+  "name": "CAAI Transactions on Intelligence Technology",
+  "works": 789,
+  "score": 1.05
+ },
+ "ophthalmology": {
+  "id": "S207341048",
+  "name": "Ophthalmology",
+  "works": 22674,
+  "score": 1.05
+ },
+ "alzheimer s dementia diagnosis assessment disease monitoring": {
+  "id": "S2898482455",
+  "name": "Alzheimer s & Dementia Diagnosis Assessment & Disease Monitoring",
+  "works": 1507,
+  "score": 1.05
+ },
+ "ophthalmology retina": {
+  "id": "S2764728514",
+  "name": "Ophthalmology Retina",
+  "works": 2555,
+  "score": 1.0
+ },
+ "eye and vision": {
+  "id": "S4210190797",
+  "name": "Eye and Vision",
+  "works": 505,
+  "score": 1.0
+ },
+ "asia pacific journal of ophthalmology": {
+  "id": "S4210173874",
+  "name": "Asia-Pacific Journal of Ophthalmology",
+  "works": 1292,
+  "score": 1.0
+ },
+ "alzheimer s dementia": {
+  "id": "S108427512",
+  "name": "Alzheimer s & Dementia",
+  "works": 66235,
+  "score": 1.0
+ },
+ "british journal of ophthalmology": {
+  "id": "S79587146",
+  "name": "British Journal of Ophthalmology",
+  "works": 25513,
+  "score": 1.0
+ },
+ "alzheimer s research therapy": {
+  "id": "S140755874",
+  "name": "Alzheimer s Research & Therapy",
+  "works": 2373,
+  "score": 1.0
+ }
+}
