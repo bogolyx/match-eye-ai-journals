@@ -4,6 +4,19 @@
 
 > Scope + Shot：投稿是对一本期刊"开一枪"。开枪之前，先看清它的 scope。
 
+## 📌 备注：我是哪个 skill / 怎么用我
+
+| | |
+|---|---|
+| **Skill 名** | `scopeshot`（曾用名 `ophthalmology-journal-recommender`，是同一个东西） |
+| **装到哪** | 全局：`~/.workbuddy/skills/scopeshot/`　单项目：`<项目>/.workbuddy/skills/scopeshot/` |
+| **装什么** | 整个仓库 → 目标目录（`SKILL.md` + `scripts/` + `data/`，缺一不可） |
+| **怎么触发** | 装好后**不用点名 skill**，直接说人话即可，例如：<br>「我写了篇文章想投，帮我选期刊」<br>「这篇稿子适合投哪？初稿在 xxx.docx」<br>「投稿期刊推荐」「帮我找同类论文」 |
+| **要不要给东西** | 给**论文初稿**（txt / md / docx 都行）最省事；只给 2–4 组主题词（疾病词 + 模态词 + 方法词）也可以 |
+| **要 API key 吗** | ❌ 不需要。数据源 OpenAlex（CC0）+ Semantic Scholar 兜底 |
+
+**识别特征（在别处看到这个仓库时怎么确认是它）**：看产出物里有没有 **"Scope 命中指数（0–100）"** 这个四维打分表（活跃度/40 + 时效性/20 + 覆盖面/20 + 相关度/20）——这是 ScopeShot 的独有标志。
+
 ## What it does / 它做什么
 
 给定一篇论文（txt / md / docx，或手动给主题词），ScopeShot 会对每本候选期刊给出：
@@ -72,7 +85,30 @@ python scripts/search_similar.py \
 
 ## 与 AI 助手配合使用
 
-`SKILL.md` 是一份完整的 agent skill（WorkBuddy / Claude Code 等可读取）：内置期刊数据库、稿件分类逻辑、CCF-A 误区澄清、中科院预警名单核查清单、以及"推荐 → 检索同类论文 → 命中率解读"的完整流程。把它放进你的 agent skill 目录即可。
+`SKILL.md` 是一份完整的 agent skill（WorkBuddy / Claude Code 等可读取）：内置期刊数据库、稿件分类逻辑、CCF-A 误区澄清、中科院预警名单核查清单、以及"推荐 → 检索同类论文 → 命中率解读"的完整流程。
+
+### 安装（换台机器/换个助手时）
+
+```bash
+# 在 skill 根目录（含 SKILL.md 的目录）执行
+git clone https://github.com/bogolyx/scopeshot.git ~/.workbuddy/skills/scopeshot
+```
+
+装完确认 `~/.workbuddy/skills/scopeshot/SKILL.md` 存在即可，助手下次启动会自动加载，**不需要手动点名 skill**。
+
+### 日常使用：直接在对话里说
+
+有稿子想投时，不需要记命令，把意图和文件丢给助手就行：
+
+| 场景 | 你直接说 | 助手会做 |
+|---|---|---|
+| 有新稿子，不知道投哪 | 「我写了篇文章，帮我看看投哪个刊」+ 附初稿 | 分类稿件 → 出冲刺/主投两梯队 + 每刊 Scope 命中指数 |
+| 已锁定几本刊，想知道哪本更稳 | 「我打算投 TMI / MedIA / Eye and Vision，帮我比一比」 | 三刊并行检索同类论文 → 命中指数横向对比 |
+| 想知道这本刊最近收什么 | 「帮我看看 Information Fusion 近 3 年收不收多模态融合的稿」 | 该刊同类论文两个榜单（最相关 + 最新） |
+| 被拒了想转投 | 「TMI 拒了，下一步投哪」 | 依据拒稿理由调整梯队，给转投路径 |
+| 稿件偏弱 | 「审稿人说创新性不够，怎么办」 | 给**提升方案**（不给降档到水刊的方案） |
+
+更底层的用法（不经助手、自己跑脚本）见上面 Quick start。
 
 ## 期刊数据版本（重要）
 
