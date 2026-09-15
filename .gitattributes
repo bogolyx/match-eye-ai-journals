@@ -1,0 +1,4 @@
+# 统一行尾：仓库内存 LF，工作区按平台检出
+* text=auto eol=lf
+*.png binary
+*.jpg binary
